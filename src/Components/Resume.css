@@ -1,0 +1,94 @@
+.about-me-content {
+    height: 50%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.176);
+    color: azure;
+    margin: auto auto;
+}
+
+/* .education{
+  transform:
+    perspective(900px)
+    rotateX(60deg)
+    scale(0.7);
+  box-shadow: 0px 20px 100px #555;
+  transition:0.5s ease all;
+
+  &:hover {
+    transform:
+      rotate(0deg)
+      scale(1)
+      translateY(10px);
+  }
+} */
+
+.float-child div {
+    text-align: left;
+  line-height: 1.5;
+}
+
+.float-child .education {
+    text-align: left;
+  line-height: 1.5;
+}
+.edu-degree {
+  font-weight: bold;
+  font-size: large;
+  font-style: italic;
+}
+li{
+    text-align: left;
+}
+
+.heading{
+    margin: 60px;
+    display: inline-block;
+    font-family: "Abril Fatface", serif;
+    font-size: 40px;
+    font-weight: 900;
+    font-style:normal;
+}
+
+.Resume {
+  /* background-image: url('/public/galaxy.jpg'); */
+  background-size: cover;
+  color: antiquewhite;
+}
+
+.interests{
+    background-color: transparent;
+    text-align: left;
+    border: 1px solid #ffffff1c;
+    border-radius: 20px;
+    margin: 3%;
+    overflow: hidden;
+}
+
+/* h1{
+    padding: 2% 0 0 45%;
+    font-size: xx-large;
+    font-weight: 900;
+    color: antiquewhite;
+} */
+
+.float-container {
+    border: 3px solid #fff;
+    border-radius: 20px;
+    width: 70%;
+    margin: 2% 15%;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.float-child {
+    /* width: 90%; */
+    padding: 5px;
+    display: inline-block;
+    /* border: 2px solid red; */
+} 
+
+.resumeBTN{
+    margin: 2% 5% !important;
+    color: rgb(183, 20, 20) !important; 
+}

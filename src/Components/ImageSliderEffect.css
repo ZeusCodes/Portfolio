@@ -1,0 +1,29 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.designer-img,
+.coder-img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: none; /* no CSS transitions */
+  pointer-events: none;
+}
+
+.designer-img {
+  background-image: url('../../public/image3L.png');
+  left: 0;
+  position: absolute;
+}
+
+.coder-img {
+  background-image: url('../../public/image4R.png');
+  right: 0;
+}

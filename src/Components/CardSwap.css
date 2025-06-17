@@ -1,0 +1,62 @@
+.card-swap-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(5%, 20%);
+  transform-origin: bottom right;
+  perspective: 900px;
+  overflow: visible;
+}
+
+.card {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: #000;
+  
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .card-swap-container {
+    transform: scale(0.75) translate(25%, 25%);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-swap-container {
+    transform: scale(0.55) translate(25%, 25%);
+  }
+}
+.underline {
+    border-bottom: 1px solid #fff !important;
+    
+    p{
+        margin: 8px
+    }
+}
+
+.cricket-card-swap {
+  background-size:cover;
+  width: 90%;
+  margin: 1% 5%;
+  border-radius: 10%;
+}
+
+.interests-desc{
+  h2 {
+    padding: 2% 0 0 30%;
+    font-size: xx-large;
+    font-weight: 900;
+    color: antiquewhite;
+  }
+  p{
+    padding: 0 0 0 30%;
+    font-weight: 400;
+    color: rgba(171, 169, 166, 0.798);
+  }
+}
