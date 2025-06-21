@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
-const AudioPlayer = () => {
+const HomeScreen = () => {
   const [volume, setVolume] = useState(50);
   const currentVolumeRef = useRef(50);
   const targetVolumeRef = useRef(50);
@@ -141,4 +141,4 @@ const AudioPlayer = () => {
   );
 };
 
-export default AudioPlayer;
+export default HomeScreen;

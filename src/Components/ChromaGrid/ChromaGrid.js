@@ -86,8 +86,8 @@ export const ChromaGrid = ({
       title: "Tyler Rodriguez",
       subtitle: "Cloud Architect",
       handle: "@tylerrod",
-      borderColor: "#06B6D4",
-      gradient: "linear-gradient(135deg, #06B6D4, #000)",
+      borderColor: "rgb(255, 149, 0)",
+      gradient: "linear-gradient(135deg,rgb(255, 149, 0), #000)",
       url: "https://aws.amazon.com/",
     },
     {
@@ -95,8 +95,8 @@ export const ChromaGrid = ({
       title: "Tyler Rodriguez",
       subtitle: "Cloud Architect",
       handle: "@tylerrod",
-      borderColor: "#06B6D4",
-      gradient: "linear-gradient(135deg, #06B6D4, #000)",
+      borderColor: "rgb(212, 6, 202)",
+      gradient: "linear-gradient(135deg,rgb(212, 6, 202), #000)",
       url: "https://aws.amazon.com/",
     },
     {
@@ -104,8 +104,8 @@ export const ChromaGrid = ({
       title: "Tyler Rodriguez",
       subtitle: "Cloud Architect",
       handle: "@tylerrod",
-      borderColor: "#06B6D4",
-      gradient: "linear-gradient(135deg, #06B6D4, #000)",
+      borderColor: "rgb(6, 212, 154)",
+      gradient: "linear-gradient(135deg,rgb(6, 212, 154), #000)",
       url: "https://aws.amazon.com/",
     },
   ];

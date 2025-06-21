@@ -1,8 +1,8 @@
-import Particles from "./Particles";
+import Particles from "../../Components/Particles/Particles";
 import "./Portfolio.css";
-import ChromaGrid from "./ChromaGrid";
-import Aurora from "./Aurora/Aurora";
-import InfiniteScroll from "./InfiniteScroll/InfiniteScroll";
+import ChromaGrid from "../../Components/ChromaGrid/ChromaGrid";
+import Aurora from "../../Components/Aurora/Aurora";
+import InfiniteScroll from "../../Components/InfiniteScroll/InfiniteScroll";
 // const items = [
 //   {
 //     image: "https://i.pravatar.cc/300?img=1",

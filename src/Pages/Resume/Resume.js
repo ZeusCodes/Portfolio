@@ -1,13 +1,11 @@
-import Particles from "./Particles";
+import Particles from "../../Components/Particles/Particles";
 import Button from "@mui/material/Button";
 import "./Resume.css";
-// import CardSwap, { Card } from "./CardSwap";
-import RollingGallery from "./RollingGallery";
-import ProfileCard from "./ProfileCard";
-import CardSwapper from "./CardSwapperElem";
-import CardSwap, { Card } from "./try";
-import ChromaGrid from "./ChromaGrid";
-import Timeline from "./Timeline";
+import RollingGallery from "../../Components/RollingGallery/RollingGallery";
+import ProfileCard from "../../Components/ProfileCard/ProfileCard";
+import CardSwapperTopElem from "../../Components/CardSwapper/CardSwapperTop";
+import CardSwapperBottomElem from "../../Components/CardSwapper/CardSwapperBottom";
+import Timeline from "../../Components/Timeline/Timeline";
 // const items = [
 //   {
 //     image: "https://i.pravatar.cc/300?img=1",
@@ -61,7 +59,7 @@ export default function Resume() {
               handle="iampallabpaul"
               status="Online"
               contactText="Contact Me"
-              iconUrl="https://www.reactbits.dev/assets/iconpattern.png"
+              iconUrl="iconUrl.png"
               avatarUrl="me.png"
               showUserInfo={true}
               enableTilt={true}
@@ -110,7 +108,7 @@ export default function Resume() {
         <h1 className="heading">Education.</h1>
         <div className="float-container education">
           <div class="float-child">
-            <img src="swinburne.png"></img>
+            <img src="swinburne.png" alt="Swinburne Logo"></img>
           </div>
           <div class="float-child">
             <div class="edu-degree">Bachelor of Computer Science</div>
@@ -133,77 +131,8 @@ export default function Resume() {
       <section>
         <h1 className="heading">Life Outside the Keyboard.</h1>
         <div className="interests">
-          <CardSwapper></CardSwapper>
-          <div
-            style={{
-              height: "380px",
-              margin: "15% 0 0 0",
-              position: "relative",
-            }}
-          >
-            <CardSwap
-              cardDistance={80}
-              verticalDistance={70}
-              delay={3000}
-              pauseOnHover={true}
-            >
-              <Card>
-                <div className="underline">
-                  <p>Card 1</p>
-                </div>
-                <div>
-                  <img
-                    className="cricket-card-swap"
-                    src="cricket2.png"
-                    alt="Thomas Cup School Cricket"
-                  ></img>
-                </div>
-              </Card>
-              <Card>
-                <div className="underline">
-                  <p>School Cricket Winners</p>
-                </div>
-                <div>
-                  <img
-                    className="cricket-card-swap"
-                    src="cricket.png"
-                    alt="Thomas Cup School Cricket"
-                  ></img>
-                </div>
-              </Card>
-              <Card>
-                <div className="underline">
-                  <p>Card 3</p>
-                </div>
-                <div>
-                  <img
-                    className="cricket-card-swap"
-                    src="cricket3.png"
-                    alt="Thomas Cup School Cricket"
-                  ></img>
-                </div>
-              </Card>
-              <Card>
-                <div className="underline">
-                  <p>Card 4</p>
-                </div>
-                <div>
-                  <img
-                    className="cricket-card-swap"
-                    src="cricket4.png"
-                    alt="Thomas Cup School Cricket"
-                  ></img>
-                </div>
-              </Card>
-            </CardSwap>
-            <div
-              className="interests-desc"
-              style={{ width: "50%", position: "relative", left: "45%" }}
-            >
-              <h2>Diving Into the Wild Unknown</h2>
-              <p>Extreme Escapes</p>
-            </div>
-          </div>
+          <CardSwapperTopElem></CardSwapperTopElem>
+          <CardSwapperBottomElem></CardSwapperBottomElem>
         </div>
       </section>
 

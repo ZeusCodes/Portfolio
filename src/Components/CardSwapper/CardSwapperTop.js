@@ -10,7 +10,7 @@ import React, {
 import gsap from "gsap";
 import "./CardSwap.css";
 
-export const Card = forwardRef(({ customClass, ...rest }, ref) => (
+const Card = forwardRef(({ customClass, ...rest }, ref) => (
   <div
     ref={ref}
     {...rest}
@@ -20,12 +20,11 @@ export const Card = forwardRef(({ customClass, ...rest }, ref) => (
 Card.displayName = "Card";
 
 const makeSlot = (i, distX, distY, total) => ({
-  x: -i * distX, // swapped to negative for right-side stack
+  x: i * distX,
   y: -i * distY,
   z: -i * distX * 1.5,
   zIndex: total - i,
 });
-
 const placeNow = (el, slot, skew) =>
   gsap.set(el, {
     x: slot.x,
@@ -39,15 +38,16 @@ const placeNow = (el, slot, skew) =>
     force3D: true,
   });
 
+/* ───────────  Component  ─────────── */
 const CardSwap = ({
   width = 500,
   height = 300,
   cardDistance = 60,
-  verticalDistance = 70,
+  verticalDistance = 70, // ← default vertical gap
   delay = 5000,
   pauseOnHover = false,
   onCardClick,
-  skewAmount = -6,
+  skewAmount = 6,
   easing = "elastic",
   children,
 }) => {
@@ -73,6 +73,7 @@ const CardSwap = ({
   const childArr = useMemo(() => Children.toArray(children), [children]);
   const refs = useMemo(
     () => childArr.map(() => React.createRef()),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [childArr.length]
   );
 
@@ -176,6 +177,7 @@ const CardSwap = ({
       };
     }
     return () => clearInterval(intervalRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
 
   const rendered = childArr.map((child, i) =>
@@ -196,11 +198,75 @@ const CardSwap = ({
     <div
       ref={container}
       className="card-swap-container"
-      style={{ width, height, right: "57%", bottom: "18%" }}
+      style={{ width, height }}
     >
       {rendered}
     </div>
   );
 };
 
-export default CardSwap;
+export default function CardSwapperTopElem() {
+  return (
+    <div style={{ height: "380px", position: "relative" }}>
+      <div className="interests-desc" style={{ width: "50%" }}>
+        <h2>My goto weekend getaway for relaxing</h2>
+        <p>Cricket!!</p>
+      </div>
+      <CardSwap
+        cardDistance={80}
+        verticalDistance={70}
+        delay={3000}
+        pauseOnHover={true}
+      >
+        <Card>
+          <div className="underline">
+            <p>Card 1</p>
+          </div>
+          <div>
+            <img
+              className="cricket-card-swap"
+              src="cricket2.png"
+              alt="Thomas Cup School Cricket"
+            ></img>
+          </div>
+        </Card>
+        <Card>
+          <div className="underline">
+            <p>Cricket</p>
+          </div>
+          <div>
+            <img
+              className="cricket-card-swap"
+              src="cricket.png"
+              alt="Thomas Cup School Cricket"
+            ></img>
+          </div>
+        </Card>
+        <Card>
+          <div className="underline">
+            <p>Card 3</p>
+          </div>
+          <div>
+            <img
+              className="cricket-card-swap"
+              src="cricket3.png"
+              alt="Thomas Cup School Cricket"
+            ></img>
+          </div>
+        </Card>
+        <Card>
+          <div className="underline">
+            <p>Card 4</p>
+          </div>
+          <div>
+            <img
+              className="cricket-card-swap"
+              src="cricket4.png"
+              alt="Thomas Cup School Cricket"
+            ></img>
+          </div>
+        </Card>
+      </CardSwap>
+    </div>
+  );
+}
