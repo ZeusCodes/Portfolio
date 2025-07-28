@@ -1,28 +1,19 @@
 .about-me-content {
     height: 50%;
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.176);
+    background-color: rgba(0, 0, 0, 0.593);
     color: azure;
     margin: auto auto;
+    h3 {
+      line-height: 1px;
+      letter-spacing: 1px;
+    }
+    h5 {
+      letter-spacing: 1px;
+    }
 }
 
-/* .education{
-  transform:
-    perspective(900px)
-    rotateX(60deg)
-    scale(0.7);
-  box-shadow: 0px 20px 100px #555;
-  transition:0.5s ease all;
-
-  &:hover {
-    transform:
-      rotate(0deg)
-      scale(1)
-      translateY(10px);
-  }
-} */
-
-.float-child div {
+.float-child .about-me-content {
     text-align: left;
   line-height: 1.5;
 }
@@ -64,13 +55,6 @@ li{
     overflow: hidden;
 }
 
-/* h1{
-    padding: 2% 0 0 45%;
-    font-size: xx-large;
-    font-weight: 900;
-    color: antiquewhite;
-} */
-
 .float-container {
     border: 3px solid #fff;
     border-radius: 20px;
@@ -89,6 +73,8 @@ li{
 } 
 
 .resumeBTN{
+  text-align: center !important;
     margin: 2% 5% !important;
-    color: rgb(183, 20, 20) !important; 
+    width: 30%;
+    background-image: radial-gradient(circle, #363a5a 0%, #000000 75%);
 }

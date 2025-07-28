@@ -110,7 +110,7 @@ const HomeScreen = () => {
             },
             "& .MuiSlider-track": {
               height: "100%",
-              backgroundImage: 'url("/image3.png")',
+              backgroundImage: 'url("/meL.png")',
               backgroundRepeat: "no-repeat",
               backgroundSize: "none",
               borderRadius: "10px",
@@ -118,7 +118,7 @@ const HomeScreen = () => {
             },
             "& .MuiSlider-rail": {
               height: "100%",
-              backgroundImage: 'url("/image4.png")',
+              backgroundImage: 'url("/meR.png")',
               backgroundRepeat: "no-repeat",
               backgroundSize: "none",
               borderRadius: "10px",

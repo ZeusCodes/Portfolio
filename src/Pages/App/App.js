@@ -3,6 +3,7 @@ import { useState } from "react";
 import Resume from "../Resume/Resume";
 import Navbar from "../../Components/Navbar/Navbar";
 // import HoverImageSlider from "../../Components/HoverSlider";
+import Contact from "../Contact/Contact";
 import HomeScreen from "../../Components/HomeScreen";
 import Portfolio from "../Portfolio/Portfolio";
 
@@ -20,7 +21,7 @@ function App() {
       content = <Portfolio></Portfolio>;
       break;
     case 4:
-      // content = <Contact></Contact>
+      content = <Contact></Contact>;
       break;
     default:
       content = <HomeScreen></HomeScreen>;
@@ -40,7 +41,7 @@ function App() {
         content = <Portfolio></Portfolio>;
         break;
       case 4:
-        // content = <Contact></Contact>
+        content = <Contact></Contact>;
         break;
       default:
         content = <HomeScreen></HomeScreen>;

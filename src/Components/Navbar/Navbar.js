@@ -33,7 +33,7 @@ const items = [
 
 export default function Navbar({ onPageClick }) {
   return (
-    <div style={{ position: "fixed", left: "50%", bottom: "2%", zIndex: 2 }}>
+    <div style={{ position: "fixed", left: "50%", bottom: "2%", zIndex: 10 }}>
       <DockGooeyNav
         onPageClick={(num) => onPageClick(num)}
         items={items}

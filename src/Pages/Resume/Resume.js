@@ -1,31 +1,11 @@
 import Particles from "../../Components/Particles/Particles";
-import Button from "@mui/material/Button";
 import "./Resume.css";
 import RollingGallery from "../../Components/RollingGallery/RollingGallery";
 import ProfileCard from "../../Components/ProfileCard/ProfileCard";
 import CardSwapperTopElem from "../../Components/CardSwapper/CardSwapperTop";
 import CardSwapperBottomElem from "../../Components/CardSwapper/CardSwapperBottom";
 import Timeline from "../../Components/Timeline/Timeline";
-// const items = [
-//   {
-//     image: "https://i.pravatar.cc/300?img=1",
-//     title: "Sarah Johnson",
-//     subtitle: "Frontend Developer",
-//     handle: "@sarahjohnson",
-//     borderColor: "#3B82F6",
-//     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-//     url: "https://github.com/sarahjohnson",
-//   },
-//   {
-//     image: "https://i.pravatar.cc/300?img=2",
-//     title: "Mike Chen",
-//     subtitle: "Backend Engineer",
-//     handle: "@mikechen",
-//     borderColor: "#10B981",
-//     gradient: "linear-gradient(180deg, #10B981, #000)",
-//     url: "https://linkedin.com/in/mikechen",
-//   },
-// ];
+import Button from "../../Components/StarBorder/StarBorder";
 export default function Resume() {
   return (
     <div className="Resume">
@@ -60,37 +40,44 @@ export default function Resume() {
               status="Online"
               contactText="Contact Me"
               iconUrl="iconUrl.png"
-              avatarUrl="me.png"
+              avatarUrl="MyImage.png"
               showUserInfo={true}
               enableTilt={true}
-              onContactClick={() => console.log("Contact clicked")}
+              onContactClick={() =>
+                window.open(
+                  (window.location.href = "mailto:pallabpaul0211@gmail.com")
+                )
+              }
             />
             {/* <img src="me.png" alt="self-portrait" style={{ height: "40vh" }} /> */}
           </div>
           <div class="float-child">
             <div className="about-me-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              magna magna, auctor nec mollis lobortis, consectetur eget nulla.
-              Nulla facilisi. Pellentesque commodo, libero eu faucibus
-              vulputate, tellus lacus porta felis, sed pretium felis nibh sed
-              diam. Donec condimentum id dolor in porta. Donec placerat
-              pellentesque sollicitudin. Fusce eget magna nunc. Vivamus vitae
-              metus sit amet ex venenatis iaculis nec id nisl. Sed vehicula nibh
-              nunc, a feugiat mauris finibus non. Suspendisse eget felis eget
-              magna malesuada imperdiet. Nulla interdum dictum velit, a iaculis
-              ligula sagittis nec. Donec in elit non erat faucibus porta. Cras
-              vitae fringilla nibh. Mauris commodo, lectus ut suscipit maximus,
-              lectus sem mattis metus, vel lobortis ex lectus nec justo. Sed
-              facilisis odio in auctor hendrerit. Nunc malesuada erat in aliquet
-              auctor. Donec ullamcorper nunc et magna ultrices tempor. Nunc
-              imperdiet, odio et dignissim rutrum, lacus nulla porttitor orci,
-              et volutpat leo enim et nulla. Integer non arcu sem. Praesent eu
-              arcu efficitur, finibus metus eget, sagittis nisl.
+              <h3>👋 Hi, I'm Pallab Paul</h3>
+              <h5>
+                Software Developer | Digital Architect | Finance Enthusiast
+              </h5>{" "}
+              I'm a Melbourne-based software developer with a strong foundation
+              in computer science and a keen interest in finance. With a passion
+              for building meaningful, user-centric digital products, I bring
+              together technical expertise and design thinking to deliver
+              robust, scalable, and impactful solutions. From mobile development
+              with Kotlin to full-stack web applications using React, Node.js,
+              and C#, I thrive on turning ideas into reality through clean code
+              and thoughtful architecture. I’ve worked across diverse
+              projects—from integrating Google Maps APIs to building interactive
+              UI/UX features with Framer Motion—always aiming to push creative
+              and technical boundaries. I value working in collaborative
+              environments where learning is continuous, and challenges drive
+              innovation. I'm currently seeking opportunities where I can
+              contribute to forward-thinking teams, deepen my engineering
+              skills, and grow into a leadership role in technology. Let’s build
+              the future, one line of code at a time.
             </div>
-            <Button className="resumeBTN" variant="outlined" color="red">
+            <Button className="resumeBTN" variant="outlined" color="cyan">
               Resume
             </Button>
-            <Button className="resumeBTN" variant="outlined" color="red">
+            <Button className="resumeBTN" variant="outlined" color="cyan">
               Video Resume
             </Button>
           </div>

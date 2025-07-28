@@ -90,6 +90,8 @@
 }
 
 .chroma-info {
+  text-align: left;
+  line-height: 1.4; /* or 1.5, depending on visual preference */
   position: relative;
   z-index: 1;
   padding: 0.75rem 1rem;
@@ -108,7 +110,6 @@
 
 .chroma-overlay {
   position: absolute;
-  background-color: transparent !important;
   inset: 0;
   pointer-events: none;
   z-index: 3;
