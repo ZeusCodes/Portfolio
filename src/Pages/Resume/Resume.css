@@ -78,3 +78,39 @@ li{
     width: 30%;
     background-image: radial-gradient(circle, #363a5a 0%, #000000 75%);
 }
+
+@media (max-width: 768px) {
+  .float-container {
+    border-color: rgb(68, 68, 68);
+    flex-direction: column;
+    width: 90%;
+    margin: 2% auto;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .float-child {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .about-me-content {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .resumeBTN {
+    width: 80% !important;
+    margin: 10px auto !important;
+    display: block;
+  }
+
+  .heading {
+    font-size: 30px !important;
+    margin: 40px !important;
+    text-align: center;
+  }
+}

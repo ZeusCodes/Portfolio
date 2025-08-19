@@ -56,4 +56,46 @@ function App() {
   );
 }
 
+// function App() {
+//   const [page, setPage] = useState(1);
+//   var content = <Resume></Resume>;
+//   switch (page) {
+//     case 1:
+//       content = <Resume></Resume>;
+//       break;
+//     case 2:
+//       content = <Portfolio></Portfolio>;
+//       break;
+//     case 3:
+//       content = <Contact></Contact>;
+//       break;
+//     default:
+//       content = <Resume></Resume>;
+//   }
+
+//   const handleClick = (pageNo) => {
+//     console.log(pageNo);
+//     setPage(pageNo);
+//     switch (page) {
+//       case 1:
+//         content = <Resume></Resume>;
+//         break;
+//       case 2:
+//         content = <Portfolio></Portfolio>;
+//         break;
+//       case 3:
+//         content = <Contact></Contact>;
+//         break;
+//       default:
+//         content = <Resume></Resume>;
+//     }
+//   };
+//   return (
+//     <div className="App">
+//       <Navbar onPageClick={handleClick}></Navbar>
+//       {content}
+//       {/* <HoverImageSlider></HoverImageSlider> */}
+//     </div>
+//   );
+// }
 export default App;

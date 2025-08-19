@@ -350,6 +350,7 @@
   .pc-card {
     height: 70svh;
     max-height: 450px;
+    margin: auto;
   }
 
   .pc-details {

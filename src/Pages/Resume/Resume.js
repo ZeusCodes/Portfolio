@@ -49,7 +49,6 @@ export default function Resume() {
                 )
               }
             />
-            {/* <img src="me.png" alt="self-portrait" style={{ height: "40vh" }} /> */}
           </div>
           <div class="float-child">
             <div className="about-me-content">
