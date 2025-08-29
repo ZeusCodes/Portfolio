@@ -6,9 +6,9 @@ import "./InfiniteScroll.css";
 gsap.registerPlugin(Observer);
 
 export default function InfiniteScroll({
-  width = "30rem",
+  width = "25rem",
   maxHeight = "100%",
-  negativeMargin = "-0.5em",
+  negativeMargin = "-2em",
   items = [],
   itemMinHeight = 150,
   isTilted = false,

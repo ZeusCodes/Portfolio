@@ -39,7 +39,8 @@ export default function Resume() {
               handle="iampallabpaul"
               status="Online"
               contactText="Contact Me"
-              iconUrl="iconUrl.png"
+              iconUrl="iconpattern.png"
+              grainUrl="grain.webp"
               avatarUrl="MyImage.png"
               showUserInfo={true}
               enableTilt={true}
@@ -73,7 +74,14 @@ export default function Resume() {
               skills, and grow into a leadership role in technology. Let’s build
               the future, one line of code at a time.
             </div>
-            <Button className="resumeBTN" variant="outlined" color="cyan">
+            <Button
+              className="resumeBTN"
+              variant="outlined"
+              color="cyan"
+              onClick={() =>
+                window.open("/Pallab_Paul_Developer.pdf", "_blank")
+              }
+            >
               Resume
             </Button>
             <Button className="resumeBTN" variant="outlined" color="cyan">

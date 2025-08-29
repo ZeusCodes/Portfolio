@@ -1,12 +1,35 @@
 import * as React from "react";
 
 import {
-  ContactPageTwoTone,
+  // ContactPageTwoTone,
   Home,
   Laptop,
   Settings,
 } from "@mui/icons-material";
 import DockGooeyNav from "./DockGooeyNav";
+
+// const items = [
+//   {
+//     icon: <Home size={18} sx={{ color: "white" }} />,
+//     label: "Home",
+//     onclick: 1,
+//   },
+//   {
+//     icon: <ContactPageTwoTone size={18} color="error" />,
+//     label: "About",
+//     onclick: 2,
+//   },
+//   {
+//     icon: <Laptop size={18} color="error" />,
+//     label: "Portfolio",
+//     onclick: 3,
+//   },
+//   {
+//     icon: <Settings size={18} color="error" />,
+//     label: "Contact",
+//     onclick: 4,
+//   },
+// ];
 
 const items = [
   {
@@ -15,19 +38,14 @@ const items = [
     onclick: 1,
   },
   {
-    icon: <ContactPageTwoTone size={18} color="error" />,
-    label: "About",
-    onclick: 2,
-  },
-  {
     icon: <Laptop size={18} color="error" />,
     label: "Portfolio",
-    onclick: 3,
+    onclick: 2,
   },
   {
     icon: <Settings size={18} color="error" />,
     label: "Contact",
-    onclick: 4,
+    onclick: 3,
   },
 ];
 

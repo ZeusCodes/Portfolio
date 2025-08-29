@@ -27,8 +27,9 @@ const RollingGallery = ({ autoplay = true, pauseOnHover = true }) => {
   );
 
   const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
+  const divisionFactor = isScreenSizeSm ? 1.85 : 2.6;
   const faceCount = images.length;
-  const faceWidth = (cylinderWidth / faceCount) * 2.6;
+  const faceWidth = (cylinderWidth / faceCount) * divisionFactor;
   const dragFactor = 0.05;
   const radius = (cylinderWidth * 1.5) / (2 * Math.PI);
 

@@ -1,19 +1,28 @@
+/* ---------- Base / global ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .contact-wrapper {
-    margin: 2% 14%;
-    border-radius: 20px;
-    border:2px solid white;
+  margin: 2% 14%;
+  border-radius: 20px;
+  border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 4rem;
-  background: transparent; /* Transparent background */
+  background: transparent;
   color: #222;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allows wrapping on mid viewports */
+  gap: 2rem;       /* better breathing room when wrapping */
 }
 
-.contact-me{
-    padding: 3rem;
+.contact-me {
+  padding: 3rem;
 }
+
 .contact-left {
   max-width: 600px;
 }
@@ -22,6 +31,7 @@
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  line-height: 1.05;
 }
 
 .dot {
@@ -62,7 +72,7 @@
   border-radius: 10px;
 }
 
-/*  */
+/* ---------- Form ---------- */
 .form-container {
   padding: 3rem;
   background-color: #ffffff00;
@@ -84,7 +94,7 @@
 }
 
 .form-group {
-    padding: 1.2rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
 }
@@ -101,11 +111,14 @@ label {
 
 input,
 textarea {
+  width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 1rem;
   resize: vertical;
+  background: #fff;
+  color: #000;
 }
 
 textarea {
@@ -130,4 +143,154 @@ button {
 
 #contact-submit:hover {
   background-color: #33333300;
+}
+
+/* ---------- Float helpers used in JSX ---------- */
+/* Keeps desktop two-column groupings for name/email vs message */
+.float-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+}
+.float-child {
+  min-width: 0; /* avoid overflow on narrow grids */
+}
+
+/* ===================== Responsive ===================== */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    margin: 4% 6%;
+    padding: 3rem;
+  }
+  .title {
+    font-size: 3.2rem;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  .half-face-img {
+    width: 340px;
+  }
+}
+
+/* Large phones & portrait tablets */
+@media (max-width: 768px) {
+  /* Stack left/right vertically and center-align */
+  .contact-wrapper {
+    margin: 6% 4%;
+    padding: 2.25rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    max-width: 100%;
+  }
+
+  .contact-right {
+    order: -1;            /* Show image first on mobile if you prefer; remove if not wanted */
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icons {
+    grid-template-columns: 1fr; /* stack social links */
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  .half-face-img {
+    width: 340px;
+  }
+
+  /* Form: single column */
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0; /* vertical rhythm handled by .form-group padding */
+  }
+
+  .full-width {
+    grid-column: auto; /* not needed when single column */
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  /* Float helpers become single column */
+  .float-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .contact-wrapper {
+    margin: 8% 3%;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .contact-me {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .half-face-img {
+    width: 220px;
+    border-radius: 8px;
+  }
+
+  .Contact h1 {
+    font-size: 1.75rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+    border-radius: 10px;
+  }
+
+  button {
+    width: 100%;   /* full-width CTA on tiny screens */
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+}
+
+/* Extra: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .social-icons a:hover {
+    transform: none;
+    opacity: 1;
+  }
+  button {
+    transition: none;
+  }
 }
