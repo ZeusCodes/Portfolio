@@ -84,9 +84,9 @@ export default function Resume() {
             >
               Resume
             </Button>
-            <Button className="resumeBTN" variant="outlined" color="cyan">
+            {/* <Button className="resumeBTN" variant="outlined" color="cyan">
               Video Resume
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
